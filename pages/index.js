@@ -1,5 +1,6 @@
-import Head from 'next/head';
 import { useContext } from "react";
+import Head from 'next/head';
+import Link from 'next/link';
 import { GlobalContext } from "@utils/GlobalContext";
 import BlurImage from '@components/BlurImage';
 
@@ -28,7 +29,14 @@ export default function Home({ images }) {
 
         <div className="mx-auto max-w-7xl py-8 px-8 xl:px-0">
           <div className="flex items-center justify-between mb-8">
-            <h1 className="dark:text-white text-2xl font-semibold">Image Blur Loader</h1>
+            <h1 className="dark:text-white text-2xl font-semibold">
+              Image Blur Loader
+              <Link href="/docs">
+                <a className="text-blue-500 hover:text-blue-600 transition-all cursor-pointer text-base pl-2">
+                  Docs
+                </a>
+              </Link>
+            </h1>
             <div onClick={() => setDarkMode(!darkMode)} className="transition-all cursor-pointer w-12 h-7 dark:bg-blue-500 bg-neutral-200 rounded-full relative">
               <div className="h-5 w-5 bg-white rounded-full absolute top-1 transition-all dark:left-6 left-1"></div>
             </div>
