@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["images.unsplash.com"],
+    unoptimized: true,
   },
   env: {
 //     API_ROUTE: "http://127.0.0.1:3000",

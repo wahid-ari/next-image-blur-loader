@@ -23,6 +23,7 @@ export default function BlurImage({ image }) {
               : 'scale-100 blur-0 grayscale-0'
           )}
           onLoadingComplete={() => setLoading(false)}
+          unoptimized
         />
       </div>
     </a>
